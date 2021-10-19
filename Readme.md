@@ -3,7 +3,8 @@
 [![License](https://poser.pugx.org/blocksystems/file-attributes/license?format=flat)](https://packagist.org/packages/blocksystems/file-attributes)
 
 ## Document
-<p>Set auto file attributes</p>
+<p>file attributes for laravel(lumen)</p>
+<p>this composer auto upload files and delete before files</p>
 
 [in your model class]
 ```php
@@ -24,9 +25,13 @@ User::create(['thumbnail' => [$request->file('thumbnail'), $request->file('profi
 ```php
 protect $filablePrefix = 'admin'; // including slash or not, everything is OK.
 ```
-##Set automatically deleting file when attributes changed or deleted
+##Set file path
 ```php
-protect $fileAutoDeleting = true;  // default : true
+protect $filablePath = 'admin/files'; // including slash or not, everything is OK.
+```
+##Set turn off automatically deleting file when attributes changed or deleted
+```php
+protect $fileAutoDeleting = false;  // default : true
 ```
 ##Everytime when attribute get changed value, will change dynamically file to url string
 ```php
